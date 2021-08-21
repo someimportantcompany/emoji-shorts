@@ -19,19 +19,19 @@ const path = require('path');
     assert(Array.isArray(data), 'Expected JSON endpoint to return an array');
 
     const library = data.reduce((list, emoji) => {
-      emoji.aliases.forEach(alias => list.alias_map[alias] = emoji.emoji);
-      list.emoji_map[emoji.emoji] = emoji.aliases.shift();
+      emoji.aliases.forEach(alias => list.alias[alias] = emoji.emoji);
+      list.emoji[emoji.emoji] = emoji.aliases.shift();
       return list;
     }, {
-      alias_map: {},
-      emoji_map: {},
-      timestamp: (new Date()).toUTCString(),
+      alias: {},
+      emoji: {},
+      timestamp: (new Date()).toISOString(),
     });
 
     fs.writeFileSync(path.join(__dirname, 'library.json'), JSON.stringify(library), 'utf8');
 
     console.log('Formatted %d emojis into %d aliases and %d emojis', ...[
-      data.length, Object.keys(library.alias_map).length, Object.keys(library.emoji_map).length,
+      data.length, Object.keys(library.alias).length, Object.keys(library.emoji).length,
     ]);
 
     console.log('Created library.json');

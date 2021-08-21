@@ -4,7 +4,7 @@
   "description": "From 🌎 to :globe: and back again",
   "main": "emoji.js",
   "scripts": {
-    "build": "node ./bin.create-library",
+    "build": "node ./build",
     "lint": "eslint --ext .js .",
     "try": "nodemon -r module-alias/register example.js",
     "test": "nyc mocha",

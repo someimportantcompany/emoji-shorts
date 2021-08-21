@@ -1,0 +1,73 @@
+{
+  "name": "emoji-shorts",
+  "version": "1.0.1",
+  "description": "From 🌎 to :globe: and back again",
+  "main": "emoji.js",
+  "scripts": {
+    "build": "node ./bin.create-library",
+    "lint": "eslint --ext .js .",
+    "try": "nodemon -r module-alias/register example.js",
+    "test": "nyc mocha",
+    "preversion": "npm run lint && npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "emoji",
+    "shorts",
+    "shortcodes"
+  ],
+  "files": [
+    "emoji.js",
+    "library.json"
+  ],
+  "author": "James D <james@jdrydn.com> (https://jdrydn.com)",
+  "license": "MIT",
+  "repository": "https://github.com/jdrydn/emoji-shorts.git",
+  "bugs": "https://github.com/jdrydn/emoji-shorts/issues",
+  "homepage": "https://github.com/jdrydn/emoji-shorts#readme",
+  "dependencies": {
+    "lodash.toarray": "^4.4.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-sort-requires": "^2.1.0",
+    "mocha": "^6.2.3",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.12",
+    "nyc": "^15.1.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE",
+    "maintained node versions"
+  ],
+  "_moduleAliases": {
+    "emoji-shorts": "./"
+  },
+  "mocha": {
+    "exit": true,
+    "require": [
+      "module-alias/register"
+    ],
+    "spec": [
+      "*.test.js"
+    ],
+    "ui": "bdd"
+  },
+  "nyc": {
+    "exclude": [
+      "*.test.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}

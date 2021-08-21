@@ -2,7 +2,7 @@
 
 [![NPM Version](https://badge.fury.io/js/emoji-shorts.svg)](https://www.npmjs.com/package/emoji-shorts)
 [![CI](https://github.com/jdrydn/emoji-shorts/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/jdrydn/emoji-shorts/actions/workflows/ci.yml)
-[![Coverage](https://coveralls.io/repos/github/jdrydn/emoji-shorts/badge.svg)](https://coveralls.io/github/jdrydn/emoji-shorts)
+<!-- [![Coverage](https://coveralls.io/repos/github/jdrydn/emoji-shorts/badge.svg)](https://coveralls.io/github/jdrydn/emoji-shorts) -->
 
 Plenty of services love to use the emoji shortcodes in plain-text markup, so this library aims to simplify that process
 for you, making 😎 become `:sunglasses:`, 💡 to `:bulb:`, etc. There's

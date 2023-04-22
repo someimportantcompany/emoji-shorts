@@ -20,11 +20,11 @@
     "emoji.js",
     "library.json"
   ],
-  "author": "James D <james@jdrydn.com> (https://jdrydn.com)",
+  "author": "jdrydn <james@jdrydn.com> (https://jdrydn.com)",
   "license": "MIT",
-  "repository": "https://github.com/jdrydn/emoji-shorts.git",
-  "bugs": "https://github.com/jdrydn/emoji-shorts/issues",
-  "homepage": "https://github.com/jdrydn/emoji-shorts#readme",
+  "repository": "https://github.com/someimportantcompany/emoji-shorts.git",
+  "bugs": "https://github.com/someimportantcompany/emoji-shorts/issues",
+  "homepage": "https://github.com/someimportantcompany/emoji-shorts#readme",
   "dependencies": {
     "lodash.toarray": "^4.4.0"
   },
